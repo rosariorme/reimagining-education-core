@@ -1,0 +1,24 @@
+<ion-view title="Participants" id="page8">
+    <ion-content  scroll="true"  padding="true" class="has-header">
+	<ion-list id="myPrograms-list4">
+		<div ng-repeat="p in participants" id="courseOfCooking-list-item40">
+		<ion-item>
+			<div class="row">
+				<div class="col text-left">
+					<b>{{p.usercompletename}}</b> <br/>
+					<b>Employee Number:</b> {{p.userid}} <br/>
+					<b>Mobile Phone:</b> {{p.phone}}
+				</div>
+				<div class="col text-right">
+					<select ng-change="confirmDeclineParticipant({{p.userid}})" ng-model="p.action">
+						<option value="" disabled selected>Pending</option>
+						<option value="confirm">Confirmed</option>
+						<option value="decline">Declined</option>
+					</select>
+				</div>
+			</div>
+		</ion-item>
+		</div>
+	</ion-list>
+    </ion-content>
+</ion-view>

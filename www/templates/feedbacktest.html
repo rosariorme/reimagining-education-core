@@ -1,0 +1,16 @@
+<ion-view title="Pre-Test" id="page-options" has-tabs="true">
+<ion-content scroll="true" class="main-content" padding="true" class="has-header">
+<div class="list">
+  <div>
+<div class="item item-divider">{{item.question}}</div>
+    <ion-checkbox ng-click="selectAnswer(item.examid,1)" ng-model="answers[item.examid].an1">{{item.answer1}}</ion-checkbox>
+    <ion-checkbox ng-click="selectAnswer(item.examid,2)" ng-model="answers[item.examid].an2">{{item.answer2}}</ion-checkbox>
+    <ion-checkbox ng-click="selectAnswer(item.examid,3)" ng-model="answers[item.examid].an3">{{item.answer3}}</ion-checkbox>
+    <ion-checkbox ng-click="selectAnswer(item.examid,4)" ng-model="answers[item.examid].an4">{{item.answer4}}</ion-checkbox>
+    <ion-checkbox ng-click="selectAnswer(item.examid,5)" ng-model="answers[item.examid].an5">{{item.answer5}}</ion-checkbox>
+</div>
+</div>
+<button ng-click="saveExam()" class="button button-block button-positive">Send Results</button>
+<button ng-click="back()" class="button button-block button-positive">Cancel</button>
+	</ion-content>
+</ion-view>

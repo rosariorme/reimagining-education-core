@@ -1,0 +1,53 @@
+<ion-view title="Course Description" id="page9">
+    <ion-content padding="false" class=" manual-remove-top-padding has-header">
+        <div class="list card" id="courseOfCooking-card24">
+            <ion-item class="item-avatar item bar bar-header bar-stable" id="courseOfCooking-list-item27">
+                <h2>{{data.list.info[0].course_name}}</h2>
+				<p>{{data.list.info[0].course_description}}</p>
+            </ion-item>
+            <ion-item ng-click="hide_students()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking-list-item38">
+                <b>Participants</b>
+                <i class="{{forms.icon}}"></i>
+            </ion-item>
+            <ion-item ng-click="gotocalendar()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking-list-item39" /*ui-sref="menu.myCalendar2"*/>
+                <b>Calendar</b>
+                <i class="icon ion-android-arrow-dropright-circle"></i>
+            </ion-item>
+			<ion-item ng-click="show_hidevenue()" class="item-icon-left item-icon-right dark  bar bar-header bar-positive" id="courseOfCooking-list-item40">
+                <b>Venue</b>
+                <i class="{{forms.icon2}}"></i>
+            </ion-item>
+            <div ng-hide="forms.venuedropdown">
+				<ion-item class="item" id="courseOfCooking-list-item46">
+                    <h2 style="white-space: normal;">Venue: {{data.list.info[0].venue}}</h2>
+                </ion-item>
+			</div>
+            <ion-item ng-click="hide_content()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking-list-item37">
+                <b>Content</b>
+                <i class="{{forms.icon3}}"></i>
+            </ion-item>
+			<ion-item ng-click="toggleNotesContent()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking2-list-item75">
+                <b>Notes</b>
+                <i class="{{forms.icon5}}"></i>
+            </ion-item>
+			<div ng-hide="forms.notescontent" style="text-align: right;">
+				<div class="list" style="text-align: left;">
+					<a ng-click="openOptions({{item.noteid}})" ng-repeat="item in noteslist" class="item item-icon-right" href="#">
+						<i class="icon ion-android-apps"></i>
+						<h2>{{item.title}}</h2>
+					  <p>{{item.text}}</p>
+					</a>
+				</div>
+				<i ng-click="addnewnote()" style="text-align: right;font-size: 50px;padding: 10px;color: #004ccc;" class="icon ion-plus-circled"></i>
+			</div>
+			<ion-item ng-click="togglefeedback()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking-list-item39" >
+                <b>Feedback</b>
+                <i class="{{forms.feedbackclass}}"></i>
+            </ion-item>
+			<div ng-hide="forms.feedbackcontent">
+                    <button ng-click="requestFeedback()" class="button button-energized button-block">REQUEST FEEDBACK</button>
+			</div>
+        </div>
+
+    </ion-content>
+</ion-view>

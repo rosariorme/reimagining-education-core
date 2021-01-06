@@ -1,0 +1,26 @@
+<ion-view ng-init="init()" title="My Programs" hide-nav-bar="false" show-nav-bar="true" hide-back-button="true" id="page1">
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a ng-class="dueclass" href="#" ng-click="getDuePrograms()">
+        Due
+      </a>
+      <a ng-class="pastclass" href="#" ng-click="getPastPrograms()">
+        Past
+      </a>
+    </div>
+  </div>
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <ion-list id="myPrograms-list3">
+            <!--ion-toggle ng-change="pushNotificationChange()" ng-model="selection.togglecomplete" toggle-class="toggle-energized" id="myPrograms-toggle1">Due / Completed</ion-toggle-->
+			
+		</ion-list>
+        <div class="spacer" style="width: 300px; height: 32px;"></div>
+		<ion-list id="myPrograms-list4">
+            <ion-item ng-repeat="item in selection.list" class="item-thumbnail-left" id="myPrograms-list-item4" ui-sref="menu.view_course_trainer({programId : {{item.courseid}},batch_id:{{item.batch_id}} })">
+                <img ng-src="{{item.preview_image}}">
+                <h2>{{item.course_name}}</h2>
+                <p><span>{{item.coursetext}}</span> <span class="rightalign">{{item.venue}}</span></p>
+            </ion-item>
+        </ion-list>	
+    </ion-content>
+</ion-view>

@@ -1,0 +1,67 @@
+/* Empty. Add your own CSS if you like */
+.logo {
+    padding:10px;
+    margin-top:20px;
+}
+/*.logo img{
+    box-shadow: 1px 1px 1px 1px;
+}*/
+.login {
+    background: #D74177; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#D74177, #FFE98A); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#D74177, #FFE98A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#D74177, #FFE98A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#D74177, #FFE98A); /* Standard syntax */
+}
+.login .item {
+    background-color: transparent;
+    color: #fff;
+}
+.login .input-label {
+    color: #fff;
+}
+.login input {
+    color: #fff;
+}
+.login {
+    background: transparent;
+}
+.rightalign{
+	float:right;
+}
+@media screen and (max-width: 480px) {
+    .rightalign{
+		float:left;
+	}
+}
+ion-header-bar.bar-stable.bar.bar-header{
+	    background: #fdd74a;
+		border-color: #fdd74a;
+}
+ion-item.item-icon-left.item-icon-right.bar.bar-header.bar-positive.item{
+	background: rgb(241, 101, 0);
+    border-color: #ff6b00;
+	
+}
+.side-menu-left ion-item{
+	color: #d26e26;
+}
+ion-header-bar .ion-navicon
+,ion-header-bar .title.title-center.header-item
+, ion-side-menu .bar.bar-stable .title
+,ion-header-bar.bar-stable .button.button-clear{
+	color:#fff;
+}
+.tabs-striped.tabs-background-positive .tabs{
+	background: #fdd74a;
+    border-color: #fe852e;
+}
+.tabs-striped.tabs-background-positive .tabs .tab-item.active{
+	color: #ff6b00;
+    border: 1px solid #ff6b00;
+    border-width: 0px 0px 4px 0px !important;
+}
+.tabs-striped.tabs-background-positive .tabs .tab-item{
+	color: #ff6b00;
+	
+}
